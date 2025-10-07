@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getLogos } from "@/api";
 import Image from "next/image";
 

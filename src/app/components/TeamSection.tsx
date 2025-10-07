@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getTeam } from "@/api";
 import Image from "next/image";
 
