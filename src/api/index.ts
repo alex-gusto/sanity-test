@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { client, urlFor } from "@/sanity/client";
 
 export const getServices = async () => {
   const services = await client.fetch(`*[_type == "service"]`);
 
-  return services.map((service) => ({
+  return services.map((service: any) => ({
     ...service,
     image: {
       ...service.image,
@@ -15,7 +16,7 @@ export const getServices = async () => {
 export const getLogos = async () => {
   const logos = await client.fetch(`*[_type == "company"]`);
 
-  return logos.map((logo) => ({
+  return logos.map((logo: any) => ({
     ...logo,
     image: {
       ...logo.image,
@@ -26,11 +27,10 @@ export const getLogos = async () => {
 
 export const getTeam = async () => {
   const teams = await client.fetch(`*[_type == "team"]`);
-  console.log("🚀 ~ getTeam ~ teams:", teams);
 
-  return teams.map((team) => ({
+  return teams.map((team: any) => ({
     ...team,
-    members: team.members.map((member) => ({
+    members: team.members.map((member: any) => ({
       ...member,
       image: {
         ...member.image,

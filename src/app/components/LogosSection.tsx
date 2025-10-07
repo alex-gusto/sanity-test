@@ -30,7 +30,7 @@ export async function LogosSection() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14">
-          {logos.map((logo) => (
+          {logos.map((logo: any) => (
             <div
               key={logo.title}
               className="flex h-16 w-36 items-center justify-center rounded-xl bg-white/80 p-4 text-xs font-semibold uppercase tracking-[0.3em] text-slate-400 shadow-[0_12px_35px_-20px_rgba(15,45,92,0.4)] backdrop-blur"

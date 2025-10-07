@@ -33,7 +33,7 @@ export async function TeamSection() {
         </header>
 
         <div className="grid gap-16">
-          {teams.map((team, index) => (
+          {teams.map((team: any, index: number) => (
             <section
               key={team.id}
               className="grid gap-10 lg:grid-cols-[0.7fr,1.3fr]"
@@ -64,7 +64,7 @@ export async function TeamSection() {
               </div>
 
               <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {team.members.map((member) => {
+                {team.members.map((member: any) => {
                   return (
                     <article
                       key={member.email}

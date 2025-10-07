@@ -41,7 +41,7 @@ export async function ServicesSection() {
       </div>
 
       <div>
-        {services.map((service, index) => {
+        {services.map((service: any, index: number) => {
           const isOddBlock = index % 2 === 0;
           const highlightStart = service.title.indexOf(service.highlight);
           const beforeHighlight =
